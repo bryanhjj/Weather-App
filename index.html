@@ -11,17 +11,25 @@
 
   <div id="form-container">
     <form id="form">
-      <label for="locationForm">City Name: </label>
-      <input type="text" id="locationForm" name="locationForm" required>
-      <input type="submit" id="search" value="Search">
+      <label for="locationForm"></label>
+      <input type="text" id="locationForm" name="locationForm" required placeholder="Insert your city name here">
+      <input type="submit" id="search" value="&#x1F50E;&#xFE0E;">
     </form>
   </div>
 
   <div id="results" class ="modal">
     <div class="modalContent">
       <span class="close">&times;</span>
+      <h5>City:</h5>
+      <h1 id="cityName"></h1>
+      <br>
+      <h5>Weather:</h5>
       <h1 id="weatherDescription"></h1>
+      <br>
+      <h5>Temperature:</h5>
       <h1 id="temperature"></h1>
+      <br>
+      <h5>Humidity:</h5>
       <h1 id="humidity"></h1>
     </div>
   </div>

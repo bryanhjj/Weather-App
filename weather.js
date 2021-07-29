@@ -6,7 +6,9 @@ const resetButton = document.querySelector('#reset');
 const weatherDescrip = document.querySelector('#weatherDescription');
 const temperature = document.querySelector('#temperature');
 const humidity = document.querySelector('#humidity');
-const results = document.querySelector('#results')
+const cityName = document.querySelector('#cityName');
+const results = document.querySelector('#results');
+const span = document.querySelector('.close');
 
 
 // updates the relevant DOM elements with the extracted data
@@ -30,6 +32,7 @@ const dataExtract = (rawData) => {
 // obtains the weather data according to user input, process said data (dataExtract()) and displays it (dataDisplay())
 const getWeatherData = async () => {
      let userLocData = userLocation.value;
+     cityName.textContent = userLocData;
     try {
       const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userLocData}&appid=${apiKey}`, 
       {
@@ -52,9 +55,7 @@ searchButton.addEventListener('click', (event) => {
 });
 
 
-// the following are for manipulating the modal box which shows the search results
-const span = document.querySelector('.close');
-
+// modal box DOM manipulation
 span.addEventListener('click', () => {
   results.style.display = "none"; // closes the modal box when users press the "x" button
 });
