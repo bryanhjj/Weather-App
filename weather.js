@@ -6,6 +6,7 @@ const resetButton = document.querySelector('#reset');
 const weatherDescrip = document.querySelector('#weatherDescription');
 const temperature = document.querySelector('#temperature');
 const humidity = document.querySelector('#humidity');
+const results = document.querySelector('#results')
 
 
 // updates the relevant DOM elements with the extracted data
@@ -46,4 +47,20 @@ searchButton.addEventListener('click', (event) => {
   event.preventDefault();
   getWeatherData();
   form.reset();
+  results.style.display = "block"; // opens the modal box after clicking the search button
+  span.style.display = "block"; // shows the "x" button for closing the modal box
 });
+
+
+// the following are for manipulating the modal box which shows the search results
+const span = document.querySelector('.close');
+
+span.addEventListener('click', () => {
+  results.style.display = "none"; // closes the modal box when users press the "x" button
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target == results) {
+    results.style.display = "none"; // closes the modal box when users click outside of the modal box
+  }
+})

@@ -5,6 +5,9 @@
   <title>WeatherApp</title>
 </head>
 <body>
+  <div id="banner">
+    <h1>WeatherApp</h1>
+  </div>
 
   <div id="form-container">
     <form id="form">
@@ -14,10 +17,13 @@
     </form>
   </div>
 
-  <div id="results">
-    <h1 id="weatherDescription"></h1>
-    <h1 id="temperature"></h1>
-    <h1 id="humidity"></h1>
+  <div id="results" class ="modal">
+    <div class="modalContent">
+      <span class="close">&times;</span>
+      <h1 id="weatherDescription"></h1>
+      <h1 id="temperature"></h1>
+      <h1 id="humidity"></h1>
+    </div>
   </div>
 
   <script src="weather.js">
