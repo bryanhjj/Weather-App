@@ -1,4 +1,4 @@
-const apiKey = "e8957761dd3908d129221b5a9d89eae3";
+const apiKey = "e8957761dd3908d129221b5a9d89eae3"; // should put this in env but since it's just a free weather query api should be fine
 const form = document.querySelector('#form');
 const userLocation = document.querySelector('#locationForm');
 const searchButton = document.querySelector('#search');
